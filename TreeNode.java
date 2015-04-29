@@ -1,23 +1,35 @@
+import java.util.ArrayList;
+
 public class TreeNode {
 	private char data;
-	private TreeNode next;
+	private ArrayList<TreeNode> children;
 	
-	public class TreeNode(char data) {
+	public TreeNode(char data) {
 		setData(data);
-		next = null;
+		children = new ArrayList<>();
 	}
 	
-	public void setNext(TreeNode next) {
-		this.next = next;
+	public void setData(char d) {
+		data = d;
 	}
-	public void setData(char data) {
-		this.data = data;
-	}
-	
 	public char getData() {
-		return this.data;
+		return data;
 	}
-	public TreeNode getNext() {
-		return next;
+	
+	public TreeNode getNode(char data) {
+		for(TreeNode node : children) {
+			if(node.getData() == data)
+				return node;
+		}
+		
+		TreeNode newNode = new TreeNode(data);
+		children.add(newNode);
+		return newNode;
+	}
+	public ArrayList<TreeNode> getChildren() {
+		return children;
+	}
+	public void addNode(TreeNode child) {
+		children.add(child);
 	}
 }
