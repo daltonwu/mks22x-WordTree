@@ -29,6 +29,7 @@ public class WordTree {
 	private ArrayList<String> printAllHelper(TreeNode node) {
 		if(node == null)
 			return null;
+		ArrayList<String> toReturn = new ArrayList<>();
 		ArrayList<TreeNode> children = node.getChildren();
 		for(TreeNode n : children) {
 		}
