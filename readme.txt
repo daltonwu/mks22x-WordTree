@@ -1,4 +1,4 @@
-Author: Dalton Wu (yes, that's right, DW wrote this code in its entirety himself)
+Author: Dalton Wu
 
 
 Methods:
@@ -18,7 +18,9 @@ String				longestWord()				returns, you guessed it, the longest word in the tree
 
 Additional features:
 
-None were added, although included in the project is the snazzy main method.
+None were added, although included in the project is the snazzy main method. Yes, it is true that some of the methods are redundant (the printing methods).
+
+Note that, when running the main method, inputting more than one space between the method name and the parameter will result in strange results. My code will scold you.
 
 
 How to run this cool project:
