@@ -1,22 +1,27 @@
 import java.util.ArrayList;
 
 public class TreeNode {
-	private char data;
+	private String data;
 	private ArrayList<TreeNode> children;
 	
-	public TreeNode(char data) {
+	public TreeNode(String data) {
 		setData(data);
 		children = new ArrayList<>();
 	}
 	
-	public void setData(char d) {
-		data = d;
-	}
-	public char getData() {
+	public String toString() {
 		return data;
 	}
 	
-	public TreeNode getNode(char data) {
+	public void setData(String d) {
+		data = d;
+	}
+	public String getData() {
+		return data;
+	}
+	
+	// the following method is used only while populating the WordTree
+	public TreeNode getNode(String data) {
 		for(TreeNode node : children) {
 			if(node.getData() == data)
 				return node;
